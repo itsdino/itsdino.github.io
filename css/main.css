@@ -1,6 +1,7 @@
 * {
-  margin: 0;
-  padding: 0; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 html {
   -webkit-text-size-adjust: 100%; }
@@ -823,10 +824,10 @@ input[class^="btn"]:hover {
 
 .skill-grid {
   display: grid;
-  align-items: space-around;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   grid-gap: 4rem;
-  grid-template-columns: repeat(1, 80%);
+  grid-template-columns: repeat(1, 1fr);
   transition: grid-gap 0.2s ease-in-out; }
   .skill-grid .skill-card {
     padding: 3rem;
@@ -959,7 +960,7 @@ input[class^="btn"]:hover {
     align-items: space-around;
     justify-content: space-around;
     grid-gap: 4rem;
-    grid-template-columns: repeat(1, 80%);
+    grid-template-columns: repeat(1, 1fr);
     transition: grid-gap 0.2s ease-in-out; }
     .projects-bg .project-grid .project-card {
       overflow: hidden;
@@ -968,12 +969,12 @@ input[class^="btn"]:hover {
       position: relative;
       z-index: 1; }
       .projects-bg .project-grid .project-card .project-description {
-        padding: 0.5rem;
+        padding: 0.75rem;
         text-align: center; }
         .projects-bg .project-grid .project-card .project-description .p-title {
           font-family: "Spartan", "Arial", sans-serif;
-          font-size: 3.6vw;
-          margin: 1rem 0;
+          font-size: 5.2vw;
+          margin: 0 0 0.75rem 0;
           font-weight: 500; }
         .projects-bg .project-grid .project-card .project-description .p-type {
           margin: 0.2rem;
