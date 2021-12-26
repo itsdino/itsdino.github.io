@@ -324,14 +324,14 @@ input[class^="btn"]:hover {
   z-index: 99; }
 
 .navigation ul {
-  background: #575E7D;
+  background: rgba(55, 55, 55, 0.25);
   width: 100%;
   position: absolute;
   left: 0;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 75px 75px;
   color: white;
   list-style: none;
-  margin: 80px 0 0 0;
+  margin: 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   padding: 0; }
