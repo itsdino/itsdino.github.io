@@ -921,11 +921,33 @@ input[class^="btn"]:hover {
   align-items: center;
   justify-content: center; }
   .about-section .about-me {
-    width: 60%; }
-    .about-section .about-me p {
+    width: 90%; }
+    .about-section .about-me .about-highlight {
+      font-family: 'Spartan', 'Arial', sans-serif;
+      text-align: center;
+      font-weight: 500;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333; }
+      .about-section .about-me .about-highlight-subtitle {
+        color: #666;
+        font-size: 1.75rem;
+        text-align: center;
+        font-family: 'Mulish', 'Arial', sans-serif;
+        font-weight: 300; }
+      .about-section .about-me .about-highlight .pop {
+        color: #2B76D8; }
+    .about-section .about-me .about-more {
+      border-left: 10px solid black;
+      padding-left: 10px;
       font-family: 'Mulish', 'Arial', sans-serif;
+      font-weight: 500;
       font-size: 1.5rem;
-      font-weight: 500; }
+      line-height: 1.75; }
+
+@media only screen and (min-width: 768px) {
+  .about-me {
+    width: 60%; } }
 
 @keyframes pulse {
   0% {
@@ -967,22 +989,24 @@ input[class^="btn"]:hover {
       background: #fff;
       border-radius: 50px;
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      box-shadow: 23px 12px 37px 17px rgba(150, 150, 150, 0.1); }
       .projects-bg .project-grid .project-card .project-description {
-        padding: 0.75rem;
+        padding: 1rem;
         text-align: center; }
         .projects-bg .project-grid .project-card .project-description .p-title {
+          color: #666;
           font-family: "Spartan", "Arial", sans-serif;
-          font-size: 5.2vw;
+          font-size: clamp(0.1rem 5.2vw, 1.1rem);
           margin: 0 0 0.75rem 0;
           font-weight: 500; }
         .projects-bg .project-grid .project-card .project-description .p-type {
           margin: 0.2rem;
           display: inline-block;
-          font-size: 2.6vw;
-          padding: 0.5rem 1rem;
+          font-size: clamp(0.1rem, 2.6vw, 0.7rem);
+          padding: 0.4rem 0.7rem;
           background: #8EFFC3;
-          color: #333;
+          color: #325a44;
           border-radius: 25px; }
       .projects-bg .project-grid .project-card .project-preview {
         box-sizing: border-box;
@@ -1005,7 +1029,13 @@ input[class^="btn"]:hover {
     grid-gap: 3rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+    .projects-bg .project-grid .project-card .project-description {
+      padding: 1.5rem; }
+      .projects-bg .project-grid .project-card .project-description .p-title {
+        font-size: 1.1rem; }
+      .projects-bg .project-grid .project-card .project-description .p-type {
+        font-size: 0.9rem; } }
 
 @media only screen and (min-width: 992px) {
   .projects-bg {
@@ -1013,7 +1043,18 @@ input[class^="btn"]:hover {
     padding-left: 3rem;
     padding-right: 3rem; }
     .projects-bg .project-grid {
-      grid-gap: 6rem; } }
+      grid-gap: 6rem; }
+      .projects-bg .project-grid .project-card {
+        border-radius: 75px; }
+        .projects-bg .project-grid .project-card .project-description .p-title {
+          font-size: 1.3rem; } }
+
+.contact-bg {
+  background: #EAF2FC;
+  border-radius: 75px;
+  position: relative;
+  box-sizing: border-box;
+  transition: border-radius 0.2s ease-in-out; }
 
 body {
   background: #fff; }
