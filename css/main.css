@@ -233,7 +233,7 @@ img {
   background-color: white;
   color: #333;
   line-height: 0;
-  margin-top: 10%; }
+  margin-top: 2rem; }
   .btn-cta .github-icon {
     height: 40px;
     width: 40px; }
@@ -317,15 +317,11 @@ input[class^="btn"]:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #575E7D;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 99; }
-  .navigation.top {
-    box-shadow: none;
-    background: transparent; }
 
 .navigation ul {
   background: #575E7D;
@@ -335,7 +331,7 @@ input[class^="btn"]:hover {
   border-radius: 0 0 10px 10px;
   color: white;
   list-style: none;
-  margin: 0 0 0 0;
+  margin: 80px 0 0 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   padding: 0; }
@@ -383,11 +379,6 @@ input[class^="btn"]:hover {
     height: 80px;
     width: auto;
     transition: all 0.15s ease-in-out; }
-  .navigation .logo.shrinked {
-    padding: 10px 0; }
-    .navigation .logo.shrinked img {
-      height: 60px;
-      width: auto; }
 
 /* menu */
 .navigation .menu {
@@ -400,8 +391,10 @@ input[class^="btn"]:hover {
   cursor: pointer;
   display: block;
   float: right;
-  padding: 20px 0;
-  margin: 43px 0;
+  background: rgba(55, 55, 55, 0.25);
+  margin-top: 1.5rem;
+  border-radius: 100%;
+  padding: 24px 12px;
   position: relative;
   user-select: none;
   transition: margin 0.15s ease-in-out;
@@ -590,6 +583,12 @@ input[class^="btn"]:hover {
         font-family: 'Mulish', sans-serif;
         font-size: 5.9vw;
         font-weight: 500; }
+
+@media only screen and (min-width: 565px) and (orientation: landscape) {
+  .header-wrapper h1 {
+    font-size: 7vw !important; }
+  .header-wrapper .subtitle {
+    font-size: 3vw !important; } }
 
 @media only screen and (min-width: 768px) {
   #header-main {
@@ -866,6 +865,10 @@ input[class^="btn"]:hover {
       z-index: -1;
       background: #fff;
       transition: border-radius 0.2s, ease-in-out; }
+
+@media only screen and (min-width: 565px) and (orientation: landscape) {
+  .skills-bg {
+    margin-top: -5vw; } }
 
 @media only screen and (min-width: 768px) {
   .skills-bg {
