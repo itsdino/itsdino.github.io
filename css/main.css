@@ -113,6 +113,12 @@ img {
   overflow: hidden;
   padding: 0 1.5rem; }
 
+.rgb-r {
+  color: #FFBFBF !important; }
+
+.rgb-g {
+  color: #8EFFC3 !important; }
+
 .py-large {
   padding: 6rem 0; }
 
@@ -202,7 +208,7 @@ img {
 
 .btn-main, .btn-light, .btn-dark, .btn-cta, .btn-body {
   border: none;
-  border-radius: 10px;
+  border-radius: 50px;
   cursor: pointer;
   display: inline-block;
   padding: 1rem 2.6rem;
@@ -211,7 +217,7 @@ img {
   text-align: center; }
 
 .btn-main {
-  background-color: #4A506A;
+  background-color: white;
   color: #333; }
 
 .btn-light {
@@ -223,9 +229,14 @@ img {
   color: #fff; }
 
 .btn-cta {
-  background-color: transparent;
-  border: 3px solid white;
-  color: #fff; }
+  padding: 1rem;
+  background-color: white;
+  color: #333;
+  line-height: 0;
+  margin-top: 10%; }
+  .btn-cta .github-icon {
+    height: 40px;
+    width: 40px; }
 
 .btn-body {
   background-color: transparent;
@@ -236,7 +247,7 @@ img {
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn"]:hover {
-  background-color: #fff;
+  background-color: #333;
   opacity: 1;
   color: #333; }
   button[class^="btn-"]:hover i:before,
@@ -543,54 +554,51 @@ input[class^="btn"]:hover {
   overflow: hidden;
   position: relative; }
   #header-main .header-img {
-    background: url("../img/site-components/hero-img.png") no-repeat 50% 0/cover;
     bottom: 0;
-    height: 100%;
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: -2; }
+    z-index: -2;
+    overflow: show; }
     #header-main .header-img:after {
+      background: url("../img/site-components/hero-img.png") no-repeat 50% 0/cover;
       content: "";
       height: 100%;
       opacity: 1;
       position: absolute;
       width: 100%; }
   #header-main .header-wrapper {
-    margin-top: 65vw;
+    height: 100vh;
     align-items: center;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    transition: margin-top 0.2s ease-in-out; }
     #header-main .header-wrapper .header-content {
       box-sizing: border-box;
       color: #4A506A;
       text-align: center;
       width: 100%; }
-      #header-main .header-wrapper .header-content .expanded {
-        display: none; }
       #header-main .header-wrapper .header-content h1 {
-        text-align: center;
+        color: white;
         font-family: "Spartan", sans-serif;
         font-weight: 500;
         font-size: 14vw;
         letter-spacing: -0.2rem;
-        color: white;
-        text-shadow: 0px 1px 21px rgba(150, 150, 150, 0.2); }
+        text-shadow: 0px 1px 21px rgba(150, 150, 150, 0.15); }
       #header-main .header-wrapper .header-content .subtitle {
-        text-align: center;
         color: #666;
         font-family: 'Mulish', sans-serif;
         font-size: 5.9vw;
         font-weight: 500; }
 
-@media only screen and (min-width: 765px) {
-  #header-main .header-img {
-    background: url("../img/site-components/hero-img.png") no-repeat 0 100%/cover; }
-  #header-main .header-wrapper {
-    height: 100px; }
-    #header-main .header-wrapper .header-content {
-      padding-right: 16%;
-      text-align: left; }
+@media only screen and (min-width: 768px) {
+  #header-main {
+    height: 100vh; }
+    #header-main .header-img {
+      overflow: visible; }
+    #header-main .header-wrapper {
+      margin-top: 0vw;
+      height: 500px; }
       #header-main .header-wrapper .header-content h1 {
         text-align: left;
         color: #dadde3;
@@ -606,32 +614,6 @@ input[class^="btn"]:hover {
         display: block;
         margin-top: -40px;
         font-size: 1.25rem; } }
-
-@media only screen and (min-width: 1250px) {
-  #header-main .header-img {
-    background: url("../img/site-components/hero-img.png") no-repeat 0 100%/cover; }
-  #header-main .header-wrapper {
-    height: 100px; }
-    #header-main .header-wrapper .header-content {
-      padding-right: 30%; }
-      #header-main .header-wrapper .header-content h1 {
-        color: #dadde3;
-        font-size: 3.8rem;
-        line-height: 1.05;
-        margin-left: -3px; }
-        #header-main .header-wrapper .header-content h1 .highlight {
-          color: #fff;
-          font-size: 5.02rem;
-          margin-left: -3px; }
-      #header-main .header-wrapper .header-content p {
-        margin-top: -40px;
-        font-size: 1rem; } }
-
-@media only screen and (min-width: 1598px) {
-  #header-main {
-    height: 100vh; }
-    #header-main .header-wrapper {
-      height: 100px; } }
 
 #header-sub {
   box-sizing: border-box;
@@ -776,6 +758,7 @@ input[class^="btn"]:hover {
     opacity: 1; } }
 
 .skills-bg {
+  margin-top: -30vw;
   background: #FFE0E0;
   border-radius: 75px;
   position: relative;
@@ -824,8 +807,8 @@ input[class^="btn"]:hover {
 
 .skill-grid {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: space-around;
+  justify-content: space-around;
   grid-gap: 4rem;
   grid-template-columns: repeat(1, 1fr);
   transition: grid-gap 0.2s ease-in-out; }
@@ -923,18 +906,19 @@ input[class^="btn"]:hover {
   .about-section .about-me {
     width: 90%; }
     .about-section .about-me .about-highlight {
+      color: #333;
       font-family: 'Spartan', 'Arial', sans-serif;
-      text-align: center;
-      font-weight: 500;
       font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: -0.1rem;
       margin-bottom: 1rem;
-      color: #333; }
+      text-align: center; }
       .about-section .about-me .about-highlight-subtitle {
         color: #666;
-        font-size: 1.75rem;
-        text-align: center;
         font-family: 'Mulish', 'Arial', sans-serif;
-        font-weight: 300; }
+        font-size: 1.75rem;
+        font-weight: 300;
+        text-align: center; }
       .about-section .about-me .about-highlight .pop {
         color: #2B76D8; }
     .about-section .about-me .about-more {
@@ -998,6 +982,7 @@ input[class^="btn"]:hover {
           color: #666;
           font-family: "Spartan", "Arial", sans-serif;
           font-size: clamp(0.1rem 5.2vw, 1.1rem);
+          letter-spacing: -0.1rem;
           margin: 0 0 0.75rem 0;
           font-weight: 500; }
         .projects-bg .project-grid .project-card .project-description .p-type {
