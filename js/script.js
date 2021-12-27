@@ -1,15 +1,13 @@
 // initializes lax
 window.onload = () => {
-  AOS.init({
-    once: true
-  });
+  AOS.init({once: false});
+  console.log("runnam bitc");
   lax.setup();
   const updateLax = () => {
     lax.update(window.scrollY);
     window.requestAnimationFrame(updateLax);
   };
   window.requestAnimationFrame(updateLax);
-  header.classList.add('loaded');
 };
 
 // scroll to top button (to be implemented)
@@ -54,19 +52,13 @@ window.onscroll = () => {
 // adds active class to menu item depending on scroll position
 const menuItemHighlightHandler = () => {
   let scrollPosition = window.scrollY;
-  if (scrollPosition < 1310) {
+  if (scrollPosition < 1100) {
     getActiveMenuItem();
     menuLinksConst[0].classList.add("active");
-  } else if (scrollPosition < 3100) {
+  } else if (scrollPosition < 2900) {
     getActiveMenuItem();
     menuLinksConst[1].classList.add("active");
-  } 
-  // contact menu item highlighter fix so it works on all resolutions
-  if (
-    scrollPosition > 7715 ||
-    window.innerHeight + scrollPosition >= document.body.offsetHeight - 2
-  ) {
-    // Kontakt
+  } else {
     getActiveMenuItem();
     menuLinksConst[2].classList.add("active");
   }
@@ -81,15 +73,15 @@ const getActiveMenuItem = () => {
 };
 
 // jQuery smooth scroll to element
-$("#navbar ul li a, .site-link").on("click", function (e) {
+$("#navbar ul li a, .restart").on("click", function (e) {
   if (this.hash !== "") {
     e.preventDefault();
     const hash = this.hash;
     $("html, body").animate(
       {
-        scrollTop: $(hash).offset().top - 48,
+        scrollTop: $(hash).offset().top,
       },
-      1000
+      1250
     );
   }
 });

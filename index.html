@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/aos.css"/>
     <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/aos.js" defer></script>
+    <script src="js/lax.min.js" defer></script>
     <script src="js/script.js" defer></script>
     <title>Dino Dzafovic - Web UI Designer/Developer</title>
 </head>
-<body>
+<body id="top">
   <!-- header -->
   <header id="header-main">
       <nav class="navigation" id="navbar">
@@ -21,35 +24,39 @@
             ></label>
             <ul class="menu menu-items">
               <li class="menu-item">
-                <a class="active" href="#home-skills">Skills</a>
+                <a class="first active" href="#top">Intro</a>
               </li>
               <li class="menu-item">
-                <a href="#home-projects">Projects</a>
+                <a href="mid #home-about-1">Projects</a>
               </li>
               <li class="menu-item">
-                <a href="#home-contact">Contact</a>
+                <a class="last" href="#home-about-2">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div class="header-img"></div>
+      <div class="header-img lax" data-lax-translate-y="0 0, 1100 -200"></div>
       <div class="container">
         <div class="header-wrapper">
           <div class="header-content">
-            <h1>Hi, I'm Dino<span class="rgb-r">.</span></h1>
-            <p class="subtitle">Web/UI Designer & Developer</p>
-            <a href="https://github.com/itsdino" target="_blank" class="btn-cta">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+            <h1 
+            data-aos="fade-up"
+            data-aos-duration="750">
+              
+                Hi, I'm Dino<span data-aos-once="true" data-aos="fade" data-aos-delay="750" data-aos-duration="400" class="rgb-r">.</span>
+            </h1>
+            <p data-aos="fade" data-aos-once="true" data-aos-delay="1200" data-aos-duration="500" class="subtitle">Web/UI Designer & Developer</p>
+            <a data-aos="zoom-out" data-aos-once="true" data-aos-delay="1800" data-aos-duration="250" href="https://github.com/itsdino" target="_blank" class="btn-cta">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                 <path id="Icon_ionic-logo-github" data-name="Icon ionic-logo-github" d="M18,2.25A15.957,15.957,0,0,0,2.25,18.4,16.12,16.12,0,0,0,13.022,33.722a1.235,1.235,0,0,0,.267.028.762.762,0,0,0,.809-.8c0-.387-.014-1.4-.021-2.749a7.2,7.2,0,0,1-1.589.19,3.659,3.659,0,0,1-3.72-2.355,4.265,4.265,0,0,0-1.751-2.362c-1.371-.963-.007-.991.1-.991h.007a3.386,3.386,0,0,1,2.412,1.673,3.092,3.092,0,0,0,2.784,1.765,4.426,4.426,0,0,0,1.8-.422,3.489,3.489,0,0,1,1-2.159c-3.495-.408-7.172-1.793-7.172-7.98a6.321,6.321,0,0,1,1.617-4.331,5.945,5.945,0,0,1,.155-4.275,1.311,1.311,0,0,1,.352-.035c.57,0,1.856.218,3.98,1.695a14.64,14.64,0,0,1,7.889,0c2.123-1.477,3.41-1.695,3.98-1.695a1.311,1.311,0,0,1,.352.035,5.945,5.945,0,0,1,.155,4.275,6.347,6.347,0,0,1,1.617,4.331c0,6.2-3.684,7.566-7.193,7.966a3.916,3.916,0,0,1,1.069,2.988c0,2.159-.021,3.9-.021,4.43a.758.758,0,0,0,.8.809,1.361,1.361,0,0,0,.281-.028A16.117,16.117,0,0,0,33.75,18.4,15.957,15.957,0,0,0,18,2.25Z" transform="translate(-2.25 -2.25)" fill="#cf215d"/>
-                </svg>
+              </svg>
             </a>
-            <a href="https://www.linkedin.com/in/dinodzafovic" target="_blank" class="btn-cta">
+            <a data-aos="zoom-out" data-aos-once="true" data-aos-delay="2000" data-aos-duration="250" href="https://www.linkedin.com/in/dinodzafovic" target="_blank" class="btn-cta">
               <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.499" viewBox="0 0 31.5 31.499">
                 <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M7.051,31.5H.52V10.47H7.051ZM3.782,7.6A3.8,3.8,0,1,1,7.564,3.783,3.814,3.814,0,0,1,3.782,7.6ZM31.493,31.5H24.976V21.263c0-2.44-.049-5.569-3.4-5.569-3.4,0-3.916,2.651-3.916,5.393V31.5H11.142V10.47h6.263v2.869H17.5a6.862,6.862,0,0,1,6.179-3.4c6.609,0,7.824,4.352,7.824,10.005V31.5Z" transform="translate(0 -0.001)" fill="#cf215d"/>
               </svg>
-              
-          </a>
+            </a>
           </div>
         </div>
       </div>
@@ -57,12 +64,10 @@
     
   <main>
     <section id="home-skills">
-      <div class="container skills-bg">
-
-        <div class="skills-container-decoration">
-        </div>
+      <div data-aos="fade-up" data-aos-once="true" data-aos-delay="2300" data-aos-duration="1000" data-aos-offset="0" class="container skills-bg" >
+        <div class="skills-container-decoration"></div>
         <div class="skill-grid py-large">
-          <div class="skill-card">
+          <div data-aos="fade-up" data-aos-once="true" data-aos-delay="2500" data-aos-duration="750" data-aos-offset="-100" class="skill-card">
             <div class="skill-card-icon">
               <svg class="the-icon" xmlns="http://www.w3.org/2000/svg" width="56.917" height="56.913" viewBox="0 0 56.917 56.913">
                 <path id="Design_Icon" data-name="Design Icon" d="M57.839,45.862a6.8,6.8,0,0,0-3.584-1.311,5.333,5.333,0,0,1-3.293-1.457,4.039,4.039,0,0,1,0-6.381l4.414-3.919a14.184,14.184,0,0,0,0-21.737A28.011,28.011,0,0,0,36.758,4.5a35.221,35.221,0,0,0-23.136,8.756c-12.165,10.752-12.165,28.366,0,39.118A34.11,34.11,0,0,0,35.9,60.445h.248c8.071,0,16.026-2.608,21.679-7.634A4.918,4.918,0,0,0,57.839,45.862ZM12.661,26.645a4.662,4.662,0,1,1,4.662,4.662A4.657,4.657,0,0,1,12.661,26.645ZM18.488,45A4.662,4.662,0,1,1,23.15,40.34,4.657,4.657,0,0,1,18.488,45Zm9.324-23.456a4.662,4.662,0,1,1,4.662-4.662A4.657,4.657,0,0,1,27.813,21.546ZM38.3,53.452A6.993,6.993,0,1,1,45.3,46.459,6.995,6.995,0,0,1,38.3,53.452Zm3.5-30.3a4.662,4.662,0,1,1,4.662-4.662A4.657,4.657,0,0,1,41.8,23.148Z" transform="matrix(1, 0.017, -0.017, 1, -3.443, -4.578)" fill="#fff"/>
@@ -79,7 +84,7 @@
             </ul>
           </div>
 
-          <div class="skill-card">
+          <div data-aos="fade-up" data-aos-once="true" data-aos-delay="2500" data-aos-duration="750" data-aos-offset="-500" class="skill-card">
             <div class="skill-card-icon">
                 <svg class="the-icon" xmlns="http://www.w3.org/2000/svg" width="71.824" height="57.896" viewBox="0 0 71.824 57.896">
                   <path id="Icon_awesome-code" data-name="Icon awesome-code" d="M30.872,56.616,24.12,54.656a1.33,1.33,0,0,1-.908-1.649L38.321.961A1.33,1.33,0,0,1,39.971.054l6.752,1.959a1.33,1.33,0,0,1,.908,1.649L32.521,55.708a1.326,1.326,0,0,1-1.649.908ZM18.254,44.2l4.815-5.136a1.328,1.328,0,0,0-.089-1.9L12.952,28.335,22.98,19.513a1.319,1.319,0,0,0,.089-1.9l-4.815-5.136a1.33,1.33,0,0,0-1.882-.055L.422,27.361a1.319,1.319,0,0,0,0,1.937l15.95,14.954a1.32,1.32,0,0,0,1.882-.055Zm36.217.066,15.95-14.954a1.319,1.319,0,0,0,0-1.937L54.471,12.407a1.34,1.34,0,0,0-1.882.055L47.774,17.6a1.328,1.328,0,0,0,.089,1.9l10.028,8.833L47.863,37.157a1.319,1.319,0,0,0-.089,1.9L52.589,44.2a1.33,1.33,0,0,0,1.882.066Z" transform="matrix(1, 0.017, -0.017, 1, 0.991, -0.003)" fill="#fff"/>
@@ -104,9 +109,9 @@
 
     <section id="home-about-1">
       <div class="container about-section py-large">
-        <div class="about-me py-large">
-          <p class="about-highlight">I love crafting user interfaces<span class="rgb-g">.</span></p>
-          <p class="about-highlight-subtitle"> Minimalistic, spacious, effective</p>
+        <div class="about-me py-large-title">
+          <p data-aos="fade-up" data-aos-duration="750" class="about-highlight">I love crafting user interfaces<span class="rgb-g">.</span></p>
+          <p data-aos="fade" data-aos-delay="500" data-aos-duration="750" class="about-highlight-subtitle">Minimalistic, spacious, effective</p>
         </div>
       </div>
     </section>
@@ -114,10 +119,11 @@
 
     
     <section id="home-projects">
-      <div class="container projects-bg">
+      <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="750" class="container projects-bg">
+        <div class="projects-container-decoration"></div>
         <div class="project-grid py-large">
 
-          <div class="project-card">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150" class="project-card">
             <div class="project-preview"><img src="./img/site-components/projects/project-preview/vsa-preview-1.png"></div> 
             <div class="project-description">
               <p class="p-title">VSA Plattenbelaege GmbH</p>
@@ -125,7 +131,7 @@
             </div>   
           </div>
 
-          <div class="project-card">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150" class="project-card">
             <div class="project-preview"><img src="./img/site-components/projects/project-preview/gibigib-preview.png"></div> 
             <div class="project-description">
               <p class="p-title">GibiGib Gym Mngmt.</p>
@@ -133,7 +139,7 @@
             </div>   
           </div>
 
-          <div class="project-card">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150" class="project-card">
             <div class="project-preview"><img src="./img/site-components/projects/project-preview/ba-preview.png"></div> 
             <div class="project-description">
               <p class="p-title">Bego Ademovic GmbH & Co. KG</p>
@@ -141,7 +147,7 @@
             </div>   
           </div>
 
-          <div class="project-card">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150" class="project-card">
             <div class="project-preview"><img src="./img/site-components/projects/project-preview/memberlake-preview.png"></div> 
             <div class="project-description">
               <p class="p-title">MemberLake User Mngmt.</p>
@@ -149,7 +155,7 @@
             </div>   
           </div>
 
-          <div class="project-card">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150" class="project-card">
             <div class="project-preview"><img src="./img/site-components/projects/project-preview/protens-preview.png"></div> 
             <div class="project-description">
               <p class="p-title">Protens UG</p>
@@ -157,7 +163,7 @@
             </div>   
           </div>
 
-          <div class="project-card">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150" class="project-card">
             <div class="project-preview"><img src="./img/site-components/projects/project-preview/stark-preview.png"></div> 
             <div class="project-description">
               <p class="p-title">Stark und Sicher</p>
@@ -171,18 +177,57 @@
 
     <section id="home-about-2">
       <div class="container about-section py-large">
-        <div class="about-me py-large">
-          <p class="about-highlight">I'm open for work<span class="pop">.</span></p>
-          <p class="about-highlight-subtitle">Looking forward to Your message</p>
+        <div class="about-me py-large-title">
+          <p data-aos="fade-up" data-aos-duration="750" class="about-highlight">I'm looking for work<span class="pop">.</span></p>
+          <p data-aos="fade" data-aos-delay="500" data-aos-duration="750" class="about-highlight-subtitle">Drop me a message</p>
         </div>
       </div>
     </section>
 
     <section id="home-contact">
-      <div class="container contact-bg">
-        blabla
+      <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="750" class="container contact-bg">
+        <div class="contact-container-decoration"></div>
+        <div class="contact-form py-large">
+          <form class="the-form" action="https://formspree.io/f/xayvnqbq" method="post">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150">
+              <label class="input-label" for="sender">Name <span class="input-required">Required</span></label><br>
+              <input class="text-input" type="text" id="sender" name="sender" required>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150">
+              <label class="input-label" for="email">E-mail <span class="input-required">Required</span></label><br>
+              <input class="text-input" type="email" id="email" name="_replyto" required>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-offset="-150">
+              <label class="input-label" for="text">Message <span class="input-required">Required</span></label><br>
+              <textarea class="text-area" id="text" name="body" required></textarea>
+            </div>
+            <div data-aos="zoom-out" data-aos-duration="750" class="button-area">
+              <button class="btn-body" type="submit">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26.998" height="26.995" viewBox="0 0 26.998 26.995">
+                  <path id="send" d="M30.649,4.563,4.838,15.813a.592.592,0,0,0,.021,1.076l6.982,3.945a1.126,1.126,0,0,0,1.287-.127L26.895,8.838c.091-.077.309-.225.394-.141s-.049.3-.127.394L15.251,22.507a1.122,1.122,0,0,0-.113,1.343L19.7,31.17a.594.594,0,0,0,1.069-.014L31.444,5.344A.592.592,0,0,0,30.649,4.563Z" transform="translate(-4.503 -4.503)" fill="#cf215d"/>
+                </svg>
+
+              </button>
+              <!-- <label>
+              <input class="submit-button" type="submit" value="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26.998" height="26.995" viewBox="0 0 26.998 26.995">
+                <path id="send" d="M30.649,4.563,4.838,15.813a.592.592,0,0,0,.021,1.076l6.982,3.945a1.126,1.126,0,0,0,1.287-.127L26.895,8.838c.091-.077.309-.225.394-.141s-.049.3-.127.394L15.251,22.507a1.122,1.122,0,0,0-.113,1.343L19.7,31.17a.594.594,0,0,0,1.069-.014L31.444,5.344A.592.592,0,0,0,30.649,4.563Z" transform="translate(-4.503 -4.503)" fill="#cf215d"/>
+              </svg>
+              </label> -->
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
+  <footer id="home-footer">
+    <div class="container py-large">
+      <div class="footer-content">
+        
+        <a class="restart" href="#top">Back to top</a>
+        <p class="finito">Made by Dino.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
