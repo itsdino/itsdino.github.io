@@ -229,14 +229,15 @@ img {
   color: #fff; }
 
 .btn-cta {
-  padding: 1rem;
   background-color: white;
   color: #333;
-  line-height: 0;
-  margin-top: 2rem; }
-  .btn-cta .github-icon {
-    height: 40px;
-    width: 40px; }
+  line-height: 23px;
+  margin: 1.5rem 1rem;
+  padding: 1.3rem 1.2rem;
+  border-radius: 100%; }
+  .btn-cta .icon {
+    height: 35px;
+    width: 35px; }
 
 .btn-body {
   background-color: transparent;
@@ -310,13 +311,9 @@ input[class^="btn"]:hover {
   width: 100%; }
 
 .navigation {
-  -moz-transition: box-shadow 0.15s, background-color 0.15s ease-out;
-  -webkit-transition: box-shadow 0.15s, background-color 0.15s ease-out;
-  -o-transition: box-shadow 0.15s, background-color 0.15s ease-out;
-  transition: box-shadow 0.15s, background-color 0.15s ease-out;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
   background-color: transparent;
   position: fixed;
   top: 0;
@@ -324,11 +321,11 @@ input[class^="btn"]:hover {
   z-index: 99; }
 
 .navigation ul {
-  background: rgba(55, 55, 55, 0.25);
+  background: rgba(55, 55, 55, 0.95);
   width: 100%;
   position: absolute;
   left: 0;
-  border-radius: 0 0 75px 75px;
+  border-radius: 0 0 50px 50px;
   color: white;
   list-style: none;
   margin: 0;
@@ -348,8 +345,6 @@ input[class^="btn"]:hover {
   transition: transform 0.3s ease-out, opacity 0.25s ease-in, margin-top 0.15s ease-in-out; }
   .navigation li:first-child {
     margin-top: 100px; }
-    .navigation li:first-child.shrinked {
-      margin-top: 76px; }
   .navigation li:last-child {
     margin-bottom: 20px; }
 
@@ -366,7 +361,7 @@ input[class^="btn"]:hover {
 .navigation .menu-btn:hover {
   background: #1E202A;
   color: #fff;
-  border-radius: 10px; }
+  border-radius: 75px; }
 
 .navigation .logo {
   display: block;
@@ -399,8 +394,6 @@ input[class^="btn"]:hover {
   user-select: none;
   transition: margin 0.15s ease-in-out;
   z-index: 99; }
-  .navigation .menu-icon.shrinked {
-    margin: 19px 0; }
 
 .navigation .menu-icon .navicon {
   background: #fff;
@@ -449,71 +442,74 @@ input[class^="btn"]:hover {
 .navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0; }
 
-/* 48em = 768px */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   #navbar .container {
     width: 100%; }
   .navigation {
-    height: 98px;
-    background: rgba(87, 94, 125, 0.75);
-    backdrop-filter: blur(8px);
+    pointer-events: none;
+    height: 60px;
     padding-top: 0px;
     transition: background-color 0.3s ease-in-out, padding-top 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out; }
-    .navigation.top {
-      background-color: transparent;
-      backdrop-filter: blur(0px); }
   .navigation ul {
+    pointer-events: auto;
+    height: auto;
+    border-radius: 0;
     background: transparent;
     margin: 0;
-    padding: 37.5px 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
     width: auto; }
-    .navigation ul.shrinked {
-      margin: 0;
-      padding: 24px 0; }
   .navigation li {
+    border-radius: 0;
     float: left;
-    margin: 0 35px 0 0;
     opacity: 1;
     transform: translateZ(0);
-    transition: none; }
+    transition: none;
+    margin-top: 0;
+    margin: 0; }
     .navigation li:first-child {
       margin-top: 0; }
-      .navigation li:first-child.shrinked {
-        margin-top: 0; }
     .navigation li:last-child {
       margin-bottom: 0;
       margin-right: 0; }
   .navigation li a {
-    border-bottom: 5px solid transparent;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 0;
-    color: #fff;
+    color: #333;
     font-size: 1.1rem;
     margin-top: 0;
-    padding: 24px 0 16px 0;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.5; }
-    .navigation li a.active {
+    padding: 1rem 1rem;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.5;
+    position: relative;
+    z-index: 98;
+    overflow: hidden; }
+    .navigation li a.active, .navigation li a.active:hover {
+      color: #CF215D;
       opacity: 1;
-      border-bottom: 2px solid #fff; }
-    .navigation li a.shrinked {
-      padding: 11px 0 6px 0; }
+      background: white;
+      border-top: 0;
+      padding: 1rem 1rem;
+      padding-top: 2rem;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0px -8px 8px 0px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+      position: relative; }
+  .menu-items {
+    top: 0; }
   .navigation li a:hover,
   .navigation .menu-btn:hover {
-    background: none;
-    border-radius: 0;
-    color: #fff;
+    z-index: 2;
+    margin-top: 0;
+    background: rgba(255, 255, 255, 0.99);
+    border-radius: 0 0 10px 10px;
+    color: #333;
     opacity: 0.85; }
   .navigation .logo img {
-    height: 100px;
+    height: 0;
     transition: height 0.3s ease-in-out;
     width: auto; }
-  .navigation .logo.shrinked {
-    padding: 14px 0; }
-    .navigation .logo.shrinked img {
-      height: 70px;
-      width: auto; }
   .navigation .menu {
     clear: none;
     float: right;
@@ -522,31 +518,13 @@ input[class^="btn"]:hover {
   .navigation .menu-icon {
     display: none; } }
 
-@media only screen and (min-width: 1598px) {
-  .navigation {
-    height: 128px; }
-    .navigation.top {
-      padding-top: 25px; }
-  .navigation .logo img {
-    height: 200px;
-    width: auto; }
-  .navigation .logo.shrinked {
-    padding: 16.5px 0; }
-    .navigation .logo.shrinked img {
-      height: 95px;
-      width: auto; }
-  .navigation ul {
-    padding: 60px 0;
-    overflow: hidden; }
-    .navigation ul.shrinked {
-      padding: 39px 0; } }
-
 #header-main {
   height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
   position: relative; }
   #header-main .header-img {
+    background: url("../img/site-components/hero-img.png") no-repeat 50% 0/cover;
     bottom: 0;
     position: absolute;
     top: 0;
@@ -554,7 +532,6 @@ input[class^="btn"]:hover {
     z-index: -2;
     overflow: show; }
     #header-main .header-img:after {
-      background: url("../img/site-components/hero-img.png") no-repeat 50% 0/cover;
       content: "";
       height: 100%;
       opacity: 1;
@@ -584,35 +561,27 @@ input[class^="btn"]:hover {
         font-size: 5.9vw;
         font-weight: 500; }
 
-@media only screen and (min-width: 565px) and (orientation: landscape) {
+@media only screen and (max-height: 420px) and (min-width: 565px) and (orientation: landscape) {
   .header-wrapper h1 {
     font-size: 7vw !important; }
   .header-wrapper .subtitle {
     font-size: 3vw !important; } }
 
 @media only screen and (min-width: 768px) {
-  #header-main {
+  #header-main .header-img {
+    background: url("../img/site-components/hero-img.png") no-repeat 50% 100%/cover;
+    overflow: visible; }
+  #header-main .header-wrapper {
     height: 100vh; }
-    #header-main .header-img {
-      overflow: visible; }
-    #header-main .header-wrapper {
-      margin-top: 0vw;
-      height: 500px; }
-      #header-main .header-wrapper .header-content h1 {
-        text-align: left;
-        color: #dadde3;
-        font-size: 3.2rem;
-        line-height: 1.05;
-        margin-left: -3px;
-        margin-bottom: 1.5rem; }
-        #header-main .header-wrapper .header-content h1 .highlight {
-          color: #fff;
-          font-size: 4.2rem;
-          margin-left: -3px; }
-      #header-main .header-wrapper .header-content p {
-        display: block;
-        margin-top: -40px;
-        font-size: 1.25rem; } }
+    #header-main .header-wrapper .header-content h1 {
+      font-size: 5rem;
+      line-height: 1.05;
+      margin-left: -3px; }
+    #header-main .header-wrapper .header-content .subtitle {
+      color: #666;
+      font-family: 'Mulish', sans-serif;
+      font-size: 2rem;
+      font-weight: 500; } }
 
 #header-sub {
   box-sizing: border-box;
@@ -759,45 +728,17 @@ input[class^="btn"]:hover {
 .skills-bg {
   margin-top: -30vw;
   background: #FFE0E0;
-  border-radius: 75px;
+  border-radius: 50px;
   position: relative;
   box-sizing: border-box;
   transition: border-radius 0.2s ease-in-out; }
   .skills-bg .skills-container-decoration {
     height: 100%;
     width: 100%;
+    background: url("../img/site-components/skills/circle-bg.svg") no-repeat 90% 40%;
     top: 0;
     left: 0;
     position: absolute; }
-    .skills-bg .skills-container-decoration .skills-deco-rectangle {
-      animation-timing-function: ease-in-out;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-name: pulse;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      position: absolute;
-      right: 300px;
-      bottom: -100px; }
-    .skills-bg .skills-container-decoration .skills-deco-triangle {
-      animation-timing-function: ease-in-out;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-name: pulse;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      position: absolute;
-      height: 400px;
-      left: -280px;
-      bottom: 100px; }
-    .skills-bg .skills-container-decoration .skills-deco-circle {
-      animation-timing-function: ease-in-out;
-      -webkit-animation-timing-function: ease-in-out;
-      animation-name: pulse;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      position: absolute;
-      height: 500px;
-      right: -100px;
-      top: -200px; }
   .skills-bg .asterisk {
     opacity: 0.5;
     color: #8B6868;
@@ -866,13 +807,13 @@ input[class^="btn"]:hover {
       background: #fff;
       transition: border-radius 0.2s, ease-in-out; }
 
-@media only screen and (min-width: 565px) and (orientation: landscape) {
+@media only screen and (min-width: 550px) {
   .skills-bg {
-    margin-top: -5vw; } }
+    margin-top: -15vh; } }
 
 @media only screen and (min-width: 768px) {
-  .skills-bg {
-    margin-top: -25vh; }
+  .skills-bg .skills-container-decoration {
+    background: url("../img/site-components/skills/circle-bg.svg") no-repeat 0 45%/cover; }
   .skill-grid {
     grid-gap: 3rem;
     padding-left: 3rem;
@@ -881,6 +822,7 @@ input[class^="btn"]:hover {
 
 @media only screen and (min-width: 992px) {
   .skills-bg {
+    margin-top: -25vh;
     border-radius: 100px;
     padding-left: 3rem;
     padding-right: 3rem; }
@@ -960,7 +902,7 @@ input[class^="btn"]:hover {
 
 .projects-bg {
   background: #EAFCF2;
-  border-radius: 75px;
+  border-radius: 50px;
   position: relative;
   box-sizing: border-box;
   transition: border-radius 0.2s ease-in-out; }

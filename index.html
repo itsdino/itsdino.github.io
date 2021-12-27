@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Dino Dzafovic - Web UI Designer/Developer</title>
 </head>
 <body>
@@ -13,15 +15,19 @@
       <nav class="navigation" id="navbar">
         <div class="container">
           <div class="nav-container">
-            <a href="index.html" class="logo" id="logo">
-            </a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"
               ><span class="navicon"></span
             ></label>
             <ul class="menu menu-items">
               <li class="menu-item">
-                <a class="active" href="./index.html">Home</a>
+                <a class="active" href="#home-skills">Skills</a>
+              </li>
+              <li class="menu-item">
+                <a href="#home-projects">Projects</a>
+              </li>
+              <li class="menu-item">
+                <a href="#home-contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -33,11 +39,17 @@
           <div class="header-content">
             <h1>Hi, I'm Dino<span class="rgb-r">.</span></h1>
             <p class="subtitle">Web/UI Designer & Developer</p>
-            <a href="#" class="btn-cta"><svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
-              <path id="Icon_ionic-logo-github" data-name="Icon ionic-logo-github" d="M18,2.25A15.957,15.957,0,0,0,2.25,18.4,16.12,16.12,0,0,0,13.022,33.722a1.235,1.235,0,0,0,.267.028.762.762,0,0,0,.809-.8c0-.387-.014-1.4-.021-2.749a7.2,7.2,0,0,1-1.589.19,3.659,3.659,0,0,1-3.72-2.355,4.265,4.265,0,0,0-1.751-2.362c-1.371-.963-.007-.991.1-.991h.007a3.386,3.386,0,0,1,2.412,1.673,3.092,3.092,0,0,0,2.784,1.765,4.426,4.426,0,0,0,1.8-.422,3.489,3.489,0,0,1,1-2.159c-3.495-.408-7.172-1.793-7.172-7.98a6.321,6.321,0,0,1,1.617-4.331,5.945,5.945,0,0,1,.155-4.275,1.311,1.311,0,0,1,.352-.035c.57,0,1.856.218,3.98,1.695a14.64,14.64,0,0,1,7.889,0c2.123-1.477,3.41-1.695,3.98-1.695a1.311,1.311,0,0,1,.352.035,5.945,5.945,0,0,1,.155,4.275,6.347,6.347,0,0,1,1.617,4.331c0,6.2-3.684,7.566-7.193,7.966a3.916,3.916,0,0,1,1.069,2.988c0,2.159-.021,3.9-.021,4.43a.758.758,0,0,0,.8.809,1.361,1.361,0,0,0,.281-.028A16.117,16.117,0,0,0,33.75,18.4,15.957,15.957,0,0,0,18,2.25Z" transform="translate(-2.25 -2.25)" fill="#cf215d"/>
-            </svg>
-            
+            <a href="https://github.com/itsdino" target="_blank" class="btn-cta">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+                <path id="Icon_ionic-logo-github" data-name="Icon ionic-logo-github" d="M18,2.25A15.957,15.957,0,0,0,2.25,18.4,16.12,16.12,0,0,0,13.022,33.722a1.235,1.235,0,0,0,.267.028.762.762,0,0,0,.809-.8c0-.387-.014-1.4-.021-2.749a7.2,7.2,0,0,1-1.589.19,3.659,3.659,0,0,1-3.72-2.355,4.265,4.265,0,0,0-1.751-2.362c-1.371-.963-.007-.991.1-.991h.007a3.386,3.386,0,0,1,2.412,1.673,3.092,3.092,0,0,0,2.784,1.765,4.426,4.426,0,0,0,1.8-.422,3.489,3.489,0,0,1,1-2.159c-3.495-.408-7.172-1.793-7.172-7.98a6.321,6.321,0,0,1,1.617-4.331,5.945,5.945,0,0,1,.155-4.275,1.311,1.311,0,0,1,.352-.035c.57,0,1.856.218,3.98,1.695a14.64,14.64,0,0,1,7.889,0c2.123-1.477,3.41-1.695,3.98-1.695a1.311,1.311,0,0,1,.352.035,5.945,5.945,0,0,1,.155,4.275,6.347,6.347,0,0,1,1.617,4.331c0,6.2-3.684,7.566-7.193,7.966a3.916,3.916,0,0,1,1.069,2.988c0,2.159-.021,3.9-.021,4.43a.758.758,0,0,0,.8.809,1.361,1.361,0,0,0,.281-.028A16.117,16.117,0,0,0,33.75,18.4,15.957,15.957,0,0,0,18,2.25Z" transform="translate(-2.25 -2.25)" fill="#cf215d"/>
+                </svg>
             </a>
+            <a href="https://www.linkedin.com/in/dinodzafovic" target="_blank" class="btn-cta">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.499" viewBox="0 0 31.5 31.499">
+                <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M7.051,31.5H.52V10.47H7.051ZM3.782,7.6A3.8,3.8,0,1,1,7.564,3.783,3.814,3.814,0,0,1,3.782,7.6ZM31.493,31.5H24.976V21.263c0-2.44-.049-5.569-3.4-5.569-3.4,0-3.916,2.651-3.916,5.393V31.5H11.142V10.47h6.263v2.869H17.5a6.862,6.862,0,0,1,6.179-3.4c6.609,0,7.824,4.352,7.824,10.005V31.5Z" transform="translate(0 -0.001)" fill="#cf215d"/>
+              </svg>
+              
+          </a>
           </div>
         </div>
       </div>
@@ -46,20 +58,9 @@
   <main>
     <section id="home-skills">
       <div class="container skills-bg">
-        <!--
+
         <div class="skills-container-decoration">
-          <svg class="skills-deco-rectangle" xmlns="http://www.w3.org/2000/svg" width="605" height="205" viewBox="0 0 605 205">
-            <rect id="Rectangle" width="605" height="205" fill="#fff" opacity="0.2"/>
-          </svg>
-          <svg class="skills-deco-triangle" xmlns="http://www.w3.org/2000/svg" width="628" height="637" viewBox="0 0 628 637">
-            <path id="Triangle" d="M314,0,628,637H0Z" fill="#fff" opacity="0.2"/>
-          </svg>          
-          <svg class="skills-deco-circle" xmlns="http://www.w3.org/2000/svg" width="1068" height="1068" viewBox="0 0 1068 1068">
-            <circle id="Circle" cx="534" cy="534" r="534" fill="#fff" opacity="0.25"/>
-          </svg>
-          
         </div>
-        -->
         <div class="skill-grid py-large">
           <div class="skill-card">
             <div class="skill-card-icon">
