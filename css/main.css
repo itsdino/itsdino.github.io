@@ -173,6 +173,17 @@ img {
     transform: scale(1.75);
     opacity: 1; } }
 
+@keyframes slomo-zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(1.05);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 /* spartan-300 - latin */
 @font-face {
   font-family: 'Spartan';
@@ -274,6 +285,17 @@ img {
     opacity: 1; }
   100% {
     transform: scale(1.75);
+    opacity: 1; } }
+
+@keyframes slomo-zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(1.05);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
     opacity: 1; } }
 
 .btn-cta, .btn-body {
@@ -553,7 +575,7 @@ img {
     bottom: 0;
     width: 100%;
     z-index: -2;
-    overflow: show; }
+    overflow: hidden; }
     #header-main .header-img:after {
       content: "";
       height: 100%;
@@ -593,7 +615,7 @@ img {
 @media only screen and (min-width: 768px) {
   #header-main .header-img {
     background: url("../img/site-components/hero-img.png") no-repeat 50% 100%/cover;
-    overflow-y: visible; }
+    overflow-y: show; }
   #header-main .header-wrapper {
     height: 100vh; }
     #header-main .header-wrapper .header-content h1 {
@@ -637,6 +659,17 @@ img {
     opacity: 1; }
   100% {
     transform: scale(1.75);
+    opacity: 1; } }
+
+@keyframes slomo-zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(1.05);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
     opacity: 1; } }
 
 .skills-bg {
@@ -822,6 +855,17 @@ img {
     transform: scale(1.75);
     opacity: 1; } }
 
+@keyframes slomo-zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(1.05);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 .projects-bg {
   background: #EAFCF2;
   border-radius: 50px;
@@ -952,6 +996,17 @@ img {
     transform: scale(1.75);
     opacity: 1; } }
 
+@keyframes slomo-zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  50% {
+    transform: scale(1.05);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 .contact-bg {
   background: #EAF2FC;
   border-radius: 75px;
@@ -1003,10 +1058,8 @@ img {
     margin-bottom: 3rem;
     transition: all 0.35s ease-in-out;
     outline: none;
-    transform: scale(1);
     box-shadow: 23px 12px 37px 17px rgba(150, 150, 150, 0.1); }
     .contact-form .text-input:focus {
-      transform: scale(1.05);
       outline: none;
       background: #fff;
       border: 2px solid rgba(207, 33, 93, 0.5); }
@@ -1020,10 +1073,8 @@ img {
     height: 200px;
     border-radius: 50px;
     transition: all 0.35s ease-in-out;
-    transform: scale(1);
     box-shadow: 23px 12px 37px 17px rgba(150, 150, 150, 0.1); }
     .contact-form .text-area:focus {
-      transform: scale(1.05);
       outline: none;
       background: #fff;
       border: 2px solid rgba(207, 33, 93, 0.5); }
